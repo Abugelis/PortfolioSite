@@ -1,0 +1,229 @@
+/* ------------------------------------------------------------ CSS RESET ----------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------------------------------------- TYPOGRAPHYY ----------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../assets/fonts/spacegrotesk-bold-webfont.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../assets/fonts/spacegrotesk-medium-webfont.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter-medium-webfont.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter-regular-webfont.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: #F5F5F5;
+}
+
+h2, h3, h4 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #F5F5F5;
+}
+
+p {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #F5F5F5;
+}
+
+button, nav a, a {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+
+/* ---------------------------------------------------------------------- MAIN NAVIGATION ------------------------------------------------------------------ */
+
+nav {
+    display: flex;
+    flex-direction: row; 
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: rgb(30, 30, 30);
+    z-index: 100;
+}
+
+nav img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;  
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.1s ease, text-shadow 0.1s ease, color 0.3s ease;
+}
+
+.nav-links a:active {
+    transform: scale(0.97);
+    text-shadow: 0 0 4px rgba(57,255,20,0.5);
+    color: #4cff4c;
+}
+
+/* ---------------------------------------------------------------- HERO SECTION -------------------------------------------------------------------------------*/
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    height: 100svh;
+    gap: 2rem;
+    background: linear-gradient(135deg, #1E1E1E 0%, #252525 100%);
+}
+
+.hero-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-shadow: 1px 1px 10px black;
+    max-width: 90%;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.hero-buttons a {
+    text-align: center;
+    color: black;
+    background-color: #4cff4c;
+    border-radius: 2rem;
+    padding: 1rem 2.5rem;
+    font-weight: 500;
+    box-shadow: inset 1px 1px 4px white, inset -1px -1px 4px black;
+}
+
+.hero-buttons a:hover {
+    box-shadow: 0 0 12px rgba(76,255,76,0.6), 0 0 32px rgba(76,255,76,0.35), inset 1px 1px 4px white, inset -1px -1px 4px black;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.typing-container {
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    color: #F5F5F5;
+}
+
+#typing::after {
+    content: '|';
+    color: #4cff4c;
+    animation: blink-caret 0.7s step-end infinite;
+}
+
+@keyframes blink-caret {
+    50% { opacity: 0; }
+}
+
+/* -------------------------------------------------------------- Very Small Mobile Screens >400px ------------------------------------------------------------*/
+
+@media (max-width: 400px) {
+    
+    nav img {
+        height: 32px;
+    }
+
+    nav {
+        padding: 1rem 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero-heading {
+        gap: 1rem;
+    }
+    .hero-buttons a {
+        padding: 0.8rem 2rem;
+    }
+}
