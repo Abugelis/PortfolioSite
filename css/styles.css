@@ -33,7 +33,7 @@ ol {
 }
 
 body {
-    background-color: rgb(30, 30, 30);
+    background-color: #1E1E1E;
 }
 
 html {
@@ -114,7 +114,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
-    background-color: rgb(30, 30, 30);
+    background-color: #1e1e1e;
     z-index: 100;
 }
 
@@ -164,15 +164,17 @@ nav img {
     max-width: 90%;
 }
 
-.hero-buttons {
+.buttons {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    justify-content: center;
 }
 
-.hero-buttons a {
+.buttons a {
     text-align: center;
-    color: black;
+    text-decoration: none;
+    color: #1E1E1E;
     background-color: #4cff4c;
     border-radius: 2rem;
     padding: 1rem 2.5rem;
@@ -180,7 +182,7 @@ nav img {
     box-shadow: inset 1px 1px 4px white, inset -1px -1px 4px black;
 }
 
-.hero-buttons a:hover {
+.buttons a:hover {
     box-shadow: 0 0 12px rgba(76,255,76,0.6), 0 0 32px rgba(76,255,76,0.35), inset 1px 1px 4px white, inset -1px -1px 4px black;
     transform: translateY(-2px);
     transition: all 0.3s ease;
@@ -204,12 +206,201 @@ nav img {
     50% { opacity: 0; }
 }
 
+/* -------------------------------------------------------------- ABOUT SECTION ------------------------------------------------------------------------------ */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 2rem 0 2rem;
+}
+
+#about h2 {
+    text-align: center;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.section-heading h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    padding: 0;
+}
+
+.decorative-line-left,
+.decorative-line-right {
+    height: 1px;
+    flex: 1;
+    background-color: #4cff4c;
+}
+
+/* ------------------------------------------------------------- PROJECTS SECTION -----------------------------------------------------------------------------*/
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+#projects h2 {
+    text-align: center;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    background-color: #252525;
+    border: 1px solid #1E1E1E;
+    border-radius: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card img {
+    border-radius: 0.5rem;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 10px #4cff4c, 0 0 20px #2a962a;
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.project-card-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.project-card-icons svg {
+    height: 40px;
+    fill: rgb(85, 85, 85);
+}
+
+.project-card-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/*---------------------------------------------------------------- CONTACT SECTION --------------------------------------------------------------------------- */
+
+#contact {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+form input, textarea {
+    height: 2rem;
+    background-color: #252525;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    color: white;
+}
+
+form textarea {
+    height: 6rem;
+    resize: vertical;
+    max-height: 12rem;
+}
+
+form button {
+    text-align: center;
+    text-decoration: none;
+    color: #1E1E1E;
+    background-color: #4cff4c;
+    border: 1px #4cff4c;
+    border-radius: 2rem;
+    padding: 1rem 2.5rem;
+    font-weight: 500;
+    box-shadow: inset 1px 1px 4px white, inset -1px -1px 4px black;
+}
+
+form button:hover {
+    box-shadow: 0 0 12px rgba(76,255,76,0.6), 0 0 32px rgba(76,255,76,0.35), inset 1px 1px 4px white, inset -1px -1px 4px black;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+
+/* --------------------------------------------------------------------- FOOTER ------------------------------------------------------------------------------ */
+
+#footer {
+    background-color: #1E1E1E;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid #252525;
+}
+
+.footer-content p {
+    color: #F5F5F5;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #4cff4c;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-links a:hover {
+    text-shadow: 0 0 8px #4cff4c;
+    color: #a3ffa3;
+}
+
+
 /* -------------------------------------------------------------- Very Small Mobile Screens >400px ------------------------------------------------------------*/
 
 @media (max-width: 400px) {
     
     nav img {
         height: 32px;
+        width: auto;
     }
 
     nav {
@@ -223,7 +414,186 @@ nav img {
     .hero-heading {
         gap: 1rem;
     }
-    .hero-buttons a {
-        padding: 0.8rem 2rem;
+    .buttons a {
+        padding: 0.6rem 1rem;
     }
+
+    form {
+        max-width: 90%;
+    }
+}
+
+/* --------------------------------------------------------------- Tablet ---------------------------------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+
+    nav img {
+        height: 58px;
+        width: auto;
+    }
+
+    .nav-links {
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        padding: 1rem 2rem;
+    }
+
+    form {
+        max-width: 60%;
+    }
+
+    form button {
+        width: 11rem;
+        margin: 0 auto;
+    }
+
+    .footer-links a {
+        font-size: 1.2rem;
+    }
+
+    .footer-content p {
+        font-size: 1rem;
+    } 
+
+
+}
+
+/* ---------------------------------------------------------------------- Laptop ---------------------------------------------------------------------------------*/
+
+@media (min-width: 1024px) {
+
+    nav img {
+        height: 68px;
+        width: auto;
+    }
+
+    .nav-links {
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        padding: 1rem 4rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    .buttons a{
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+
+    .buttons a.contact-btn {
+        padding: 1rem 3.3rem;
+    }
+
+    #about {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    #projects {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-links a {
+        font-size: 1.4rem;
+    }
+
+    .footer-content p {
+        font-size: 1.2rem;
+    } 
+}
+
+/* --------------------------------------------------------------- Large Screens -------------------------------------------------------------------*/
+
+@media (min-width: 1440px) {
+
+    .hero-heading{
+        gap: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    h1 {
+        font-size: 4.2rem;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    .buttons a{
+        font-size: 1.6rem;
+    }
+
+    .buttons a.contact-btn {
+        padding: 1rem 3.6rem;
+    }
+
+    #about {
+        max-width: 70%;
+    }
+
+    #projects {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    form {
+        max-width: 40%;
+    }
+
+
+    form button {
+        width: 16rem;
+        margin: 0 auto;
+        font-size: 1.6rem;
+    }
+
+    .footer-links a {
+        font-size: 1.6rem;
+    }
+
+    .footer-content p {
+        font-size: 1.4rem;
+    } 
 }
