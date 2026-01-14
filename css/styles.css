@@ -107,7 +107,6 @@ button, nav a, a {
 /* ---------------------------------------------------------------------- MAIN NAVIGATION ------------------------------------------------------------------ */
 
 
-
 nav {
     display: flex;
     flex-direction: row; 
@@ -117,7 +116,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
-    background-color: #1e1e1eef;
+    background-color: #1e1e1e;
     z-index: 100;
 }
 
@@ -423,6 +422,18 @@ form button:hover {
 
     form {
         max-width: 90%;
+    }
+}
+
+/* ------------------------------------------------------------------------ Mobile Landscape --------------------------------------------------------------------*/
+
+@media (max-height: 450px) and (orientation: landscape) {
+    .hero-heading {
+        margin-top: 6rem;
+    }
+
+    .hero {
+        height: 130svh;
     }
 }
 
